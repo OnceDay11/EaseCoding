@@ -53,3 +53,6 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# 屏蔽 vscode 相关文件
+.vscode/
