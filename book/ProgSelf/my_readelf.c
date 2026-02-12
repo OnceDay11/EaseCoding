@@ -20,10 +20,18 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include <bfd.h>
 #include <elf.h>
 
 int main(int argc, char *argv[])
 {
+    // 查看 bpf 支持的 ELF 文件格式
+    const char **target = bfd_target_list();
+    while (*target != NULL) {
+        printf("Supported ELF target: %s\n", *target);
+        target++;
+    }
+
     if (argc != 2) {
         fprintf(stderr, "Usage: %s <elf_file>\n", argv[0]);
         return 1;
