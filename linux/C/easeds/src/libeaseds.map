@@ -1,0 +1,8 @@
+# easeds 库版本控制脚本, 详细信息参考以下文档:
+# https://sourceware.org/binutils/docs/ld/VERSION.html
+# 该文件修改会导致libeaseds.so的API接口变化, 请谨慎修改!!!
+
+LIBEASEDS_1.0 {
+    # global:
+    local: *;
+};

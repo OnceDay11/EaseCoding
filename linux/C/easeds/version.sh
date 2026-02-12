@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# 开启调试
+# set -x
+# 关闭调试
+# set +x
+
+# 定义版本号
+export EASEDS_MAJOR_VERSION=1
+export EASEDS_MINOR_VERSION=0
+export EASEDS_PATCH_VERSION=0
+
+# 定义版本信息
+export EASEDS_VERSION="${EASEDS_MAJOR_VERSION}.${EASEDS_MINOR_VERSION}.${EASEDS_PATCH_VERSION}"
+
+# 定义SO版本
+export EASEDS_SO_VERSION="${EASEDS_MAJOR_VERSION}"
