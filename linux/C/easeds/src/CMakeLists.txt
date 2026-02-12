@@ -1,6 +1,7 @@
 # 子目录辅助 CmakeLists.txt 文件, 定义了 Easeds 模块的构建规则和依赖关系.
 # 添加源文件
 set(easeds_SRCS
+    easeds-array.c
     easeds-log.c
     easeds-utils.c
   )
@@ -8,6 +9,7 @@ set(easeds_SRCS
 # 添加单元测试源文件
 set(easeds_unittest_SRCS
     easeds-unittest.c
+    easeds-array-unittest.c
     )
 
 # 添加链接库

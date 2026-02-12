@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2025 Ruijie Networks (CSBU) Co., Ltd., All rights reserved.
  *
- * @FilePath: /linux/C/easeds/easeds_log.h
+ * @FilePath: /linux/C/easeds/src/easeds-log.h
  * @Author: Once Day <once_day@qq.com> <chenguang1@ruijie.com.cn>.
  * @Date: 2025-04-01 11:04
  * @info: Encoder=utf-8, TabSize=4, Eol=\n.
@@ -23,6 +23,7 @@
 #include <stdarg.h>
 #include <stdbool.h>
 #include <stdint.h>
+#include <stdio.h>
 
 /* 运行环境头文件 */
 #include "easeds-environment.h"
