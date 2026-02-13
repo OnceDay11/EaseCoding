@@ -111,6 +111,12 @@ struct easeds_unittest_node {
 /* 注册单元测试到链表中, 最终通过单元测试主入口函数进行执行 */
 extern void easeds_unittest_register(struct easeds_unittest_node *test_node);
 
+/* 避免VScode解析异常 */
+#ifdef VSCODE_INTELLISENSE
+#define constructor(...) constructor
+#define destructor(...)  destructor
+#endif
+
 /* 定义单元测试构造函数 */
 #define EASEDS_UNITTEST_INIT(func) static void __attribute__((constructor(6666), used)) func(void)
 

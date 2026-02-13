@@ -25,8 +25,15 @@
 // 项目内部头文件
 #include "easeds-log.h"
 
-// 创建一个动态数组, 返回数组指针, 失败返回NULL
-struct easeds_array *easeds_array_create(uint32_t element_size, uint32_t initial_capacity)
+/**
+ * @description: 创建一个动态数组, 返回数组指针, 失败返回NULL.
+ * @param name 数组名称, 预留字段, 可用于调试和日志输出
+ * @param element_size 元素大小, 单位字节
+ * @param initial_capacity 初始容量, 如果为0则使用默认初始容量
+ * @return 成功返回数组指针, 失败返回NULL
+ */
+struct easeds_array *easeds_array_create(
+    const char *name, uint32_t element_size, uint32_t initial_capacity)
 {
     if (initial_capacity == 0) {
         initial_capacity = EASEDS_ARRAY_DEFAULT_INITIAL_CAPACITY;    // 默认初始容量

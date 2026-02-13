@@ -28,12 +28,20 @@
 extern "C" {
 #endif
 
+/* Release 版本不编译检查宏, 提高性能表现 */
+#ifdef NDEBUG
+#define EASEDS_CHECK(cond, ...)
+#define EASEDS_CHECK_RETURN(cond, return_value_when_false, ...)
+#define EASEDS_CHECK_NULL_RETURN(pointer, return_value_when_false)
+#define EASEDS_CHECK_NULL_POINTER(pointer)
+#else
+
 /* 检查宏, 条件不成立时, 输出错误信息 */
 #define EASEDS_CHECK(cond, ...)                                                  \
     do {                                                                         \
         if (unlikely(!(cond))) {                                                 \
             EASEDS_ERR("[easeds check failed]: cond [" #cond "]. " __VA_ARGS__); \
-            easeds_abort("check failed");                                        \
+            return EASEDS_ERROR;                                                 \
         }                                                                        \
     } while (0)
 
@@ -63,6 +71,8 @@ extern "C" {
             return EASEDS_ERROR_NULL_POINTER;                                   \
         }                                                                       \
     } while (0)
+
+#endif    // NDEBUG
 
 #ifdef __cplusplus
 }

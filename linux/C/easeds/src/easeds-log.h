@@ -27,6 +27,7 @@
 
 /* 运行环境头文件 */
 #include "easeds-environment.h"
+#include "easeds-public.h"
 
 #ifdef __cplusplus
 extern "C" {

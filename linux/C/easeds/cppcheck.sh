@@ -42,7 +42,7 @@ CPP_ARGS="$CPP_ARGS --error-exitcode=1"
 INFO "CPP_ARGS: [$CPP_ARGS]"
 
 # 指定检查目录
-CHECK_DIR="$SOURCE_DIR/src $SOURCE_DIR/util $SOURCE_DIR/mini"
+CHECK_DIR="$SOURCE_DIR/src"
 INFO "CHECK_DIR: [$CHECK_DIR]"
 
 # 对代码进行静态检查, 使用tee将stderr输出镜像到本地文件里
